@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Dataset - do not upload to GitHub
+data/*
+!data/.gitkeep
+
+# Model checkpoints
+models/*
+!models/.gitkeep
+
+# Generated results
+results/*
+!results/.gitkeep
+
+# Environment files
+.env
+.venv/
+venv/
