@@ -1,6 +1,19 @@
-torch
-torchvision
-opencv-python
-numpy
-matplotlib
-Pillow
+# Core deep-learning framework
+# Install the PyTorch build appropriate for your CPU/CUDA environment:
+# https://pytorch.org/get-started/locally/
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Data handling and image processing
+numpy>=1.24
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Visualization and experiment results
+matplotlib>=3.7.0
+pandas>=2.0.0
+tqdm>=4.66.0
+
+# Image-processing utilities and COD evaluation metrics
+scikit-image>=0.22.0
+pysodmetrics==1.6.2
