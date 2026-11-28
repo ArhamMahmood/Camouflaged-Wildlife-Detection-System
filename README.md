@@ -242,6 +242,16 @@ The project can also be used in Google Colab. Clone the repository, install the 
 
 Users are responsible for ensuring they have the right to upload and process any image they submit. Do not upload confidential, sensitive, or personally identifying material.
 
+## Project Use and Permissions Disclaimer
+
+**This project is provided strictly for educational, learning, and non-commercial research purposes. It is not intended or authorized for commercial use.**
+
+You may review the project to learn about camouflaged object detection, deep learning, PyTorch, model training, and Gradio deployment. However, do not commercially use, redistribute, publish, modify for commercial purposes, or reuse substantial parts of this project's code, implementation, documentation, or other original project materials without obtaining prior written permission from the **original author and creator of this project**.
+
+If you wish to use, adapt, reproduce, redistribute, or otherwise incorporate any part of this project into another project, please contact the original author and creator to request permission first.
+
+This notice applies to the original materials created for this project. Third-party materials, libraries, pretrained weights, and datasets remain subject to their respective owners' licenses and terms. In particular, use of the COD10K dataset is governed by the dataset authors' terms; contact the COD10K authors for permissions relating to that dataset. Permission from this project's creator does not replace permission required from third-party rights holders.
+
 ## 10. Troubleshooting
 
 | Issue | Suggested check |
