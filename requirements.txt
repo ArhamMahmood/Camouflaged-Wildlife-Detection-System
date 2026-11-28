@@ -17,3 +17,8 @@ tqdm>=4.66.0
 # Image-processing utilities and COD evaluation metrics
 scikit-image>=0.22.0
 pysodmetrics==1.6.2
+
+# Runtime dependencies for Hugging Face Spaces deployment
+# ResNet34 U-Net inference + Gradio web application
+
+gradio==6.31.0
