@@ -24,6 +24,17 @@ class COD10KDataset(Dataset):
         self.split = split
         self.image_size = image_size
 
+        # ImageNet normalization parameters
+        self.mean = torch.tensor(
+            [0.485, 0.456, 0.406],
+            dtype=torch.float32
+        ).view(3, 1, 1)
+
+        self.std = torch.tensor(
+            [0.229, 0.224, 0.225],
+            dtype=torch.float32
+        ).view(3, 1, 1)
+
         # Define image and mask directories
         self.image_dir = self.root_dir / split / "Image"
         self.mask_dir = self.root_dir / split / "GT_Object"
@@ -49,7 +60,6 @@ class COD10KDataset(Dataset):
             raise RuntimeError("No valid image-mask pairs found.")
 
     def __len__(self):
-
         return len(self.samples)
 
     def __getitem__(self, index):
@@ -85,7 +95,7 @@ class COD10KDataset(Dataset):
             interpolation=cv2.INTER_NEAREST
         )
 
-        # Normalize pixel values to [0, 1]
+        # Convert pixel values to [0, 1]
         image = image.astype(np.float32) / 255.0
         mask = mask.astype(np.float32) / 255.0
 
@@ -95,5 +105,8 @@ class COD10KDataset(Dataset):
         # Convert arrays into PyTorch tensors
         image = torch.from_numpy(image)
         mask = torch.from_numpy(mask).unsqueeze(0)
+
+        # Apply ImageNet normalization to the image
+        image = (image - self.mean) / self.std
 
         return image, mask
