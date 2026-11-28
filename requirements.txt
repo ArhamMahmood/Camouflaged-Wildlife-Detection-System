@@ -18,7 +18,7 @@ tqdm>=4.66.0
 scikit-image>=0.22.0
 pysodmetrics==1.6.2
 
-# Runtime dependencies for Hugging Face Spaces deployment
-# ResNet34 U-Net inference + Gradio web application
+# Runtime dependencies for the Hugging Face ZeroGPU Space
+# Gradio, spaces, and PyTorch are supplied/managed by the Space runtime.
 
-gradio==6.31.0
+torchvision
